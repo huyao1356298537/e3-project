@@ -12,10 +12,6 @@
     <artifactId>e3-manager</artifactId>
     <packaging>pom</packaging>
 
-    <name>Maven</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://maven.apache.org/</url>
-    <inceptionYear>2001</inceptionYear>
     <modules>
         <module>e3-manager-dao</module>
         <module>e3-manager-entity</module>
@@ -23,6 +19,54 @@
         <module>e3-manager-service</module>
         <module>e3-manager-web</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <!-- hibernate配置-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+        </dependency>
+        <!-- hibernate 缓存, 视情况添加-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+        </dependency>
+        <!-- spring orm  -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+
+    </dependencies>
+
 
     <!-- 配置tomcat插件 -->
     <build>
@@ -37,4 +81,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

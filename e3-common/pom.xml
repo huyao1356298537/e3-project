@@ -8,10 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>e3-common</artifactId>
-
     <name>e3-common</name>
+
     <dependencies>
         <!-- 时间操作组件 -->
         <dependency>
@@ -63,3 +62,4 @@
         </dependency>
     </dependencies>
 </project>
+
