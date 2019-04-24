@@ -5,8 +5,9 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+
 @Entity
-@Table(name = "tb_item_cat")
+@Table(name="tb_item_cat")
 public class TbItemCat implements Serializable {
     private Long id;
 
@@ -23,6 +24,8 @@ public class TbItemCat implements Serializable {
     private Date created;
 
     private Date updated;
+
+
     @Id
     @GeneratedValue(generator = "_native")
     @GenericGenerator(name = "_native" ,strategy = "native")
@@ -33,7 +36,7 @@ public class TbItemCat implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    @Column(name = "parent_id")
+    @Column(name="parent_id")
     public Long getParentId() {
         return parentId;
     }
@@ -57,6 +60,7 @@ public class TbItemCat implements Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
     @Column(name = "sort_order")
     public Integer getSortOrder() {
         return sortOrder;
@@ -65,7 +69,8 @@ public class TbItemCat implements Serializable {
     public void setSortOrder(Integer sortOrder) {
         this.sortOrder = sortOrder;
     }
-    @Column(name = "is_parent")
+
+    @Column(name= "is_parent")
     public Boolean getIsParent() {
         return isParent;
     }

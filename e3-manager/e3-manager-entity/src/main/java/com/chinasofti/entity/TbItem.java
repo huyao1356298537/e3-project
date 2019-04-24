@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 @Entity
-@Table(name = "tb_item")
+@Table(name="tb_item")
 public class TbItem implements Serializable {
     private Long id;
 

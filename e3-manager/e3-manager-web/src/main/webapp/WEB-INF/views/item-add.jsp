@@ -74,6 +74,7 @@
 			//根据商品的分类id取商品 的规格模板，生成规格信息。第四天内容。
 			//E3.changeItemParam(node, "itemAddForm");
 		}});
+
 	});
 	//提交表单
 	function submitForm(){
@@ -122,4 +123,7 @@
 		$('#itemAddForm').form('reset');
 		itemAddEditor.html('');
 	}
+
+
+
 </script>

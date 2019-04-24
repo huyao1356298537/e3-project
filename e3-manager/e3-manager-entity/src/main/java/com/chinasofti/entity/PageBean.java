@@ -2,7 +2,7 @@ package com.chinasofti.entity;
 
 import java.util.List;
 
-public class PageBean {
+public class PageBean<T>  {
     private Integer currentPage;  //当前页码
 
     private Integer pageSize;  //总页数
@@ -11,7 +11,10 @@ public class PageBean {
 
     private Integer pageCount;   //每页条数
 
-    private List resultList;   // 数据
+    private List<T> resultList;   // 数据
+    public Integer getFirst() {
+        return (currentPage-1)*pageCount;
+    }
 
     public Integer getCurrentPage() {
         return currentPage;
@@ -45,11 +48,11 @@ public class PageBean {
         this.pageCount=pageCount;
     }
 
-    public List getResultList() {
+    public List<T> getResultList() {
         return resultList;
     }
 
-    public void setResultList(List resultList) {
+    public void setResultList(List<T> resultList) {
         this.resultList=resultList;
     }
 }
