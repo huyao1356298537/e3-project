@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+
 @Entity
 @Table(name="tb_item")
 public class TbItem implements Serializable {
@@ -29,6 +30,7 @@ public class TbItem implements Serializable {
     private Date created;
 
     private Date updated;
+
     @Id
     @GeneratedValue(generator = "_native")
     @GenericGenerator(name = "_native" ,strategy = "native")

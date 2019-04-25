@@ -7,9 +7,10 @@ import org.springframework.stereotype.Repository;
 /**
  * author:胡瑶
  * date:2019/4/24
- * time:14:53
+ * time:18:50
  */
 @Repository
 public class ItemDaoImp extends BaseDaoImpl<TbItem> implements ItemDao {
 
 }
+
