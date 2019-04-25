@@ -13,7 +13,7 @@ import java.util.List;
  * date:2019/4/24
  * time:14:59
  */
-@Service("itemService")
+@Service
 public class ItemServiceImpl implements ItemService {
 
     @Autowired
@@ -29,7 +29,10 @@ public class ItemServiceImpl implements ItemService {
         EasyUIDataGridResult easyUIDataGridResult  =  new EasyUIDataGridResult(counts,list);
         return easyUIDataGridResult;
     }
-
+    @Override
+    public void save(TbItem tbItem) {
+        itemDao.add(tbItem);
+    }
 
 }
 
