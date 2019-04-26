@@ -51,10 +51,9 @@ public class E3Result implements Serializable{
         this.msg = "OK";
         this.data = data;
     }
-
-//    public Boolean isOK() {
-//        return this.status == 200;
-//    }
+    /*public Boolean isOK() {
+        return this.status == 200;
+    }*/
 
     public Integer getStatus() {
         return status;

@@ -1,12 +1,12 @@
 package com.chinasofti.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+
+
 @Entity
-@Table(name = "tb_item_desc")
+@Table(name="tb_item_desc")
 public class TbItemDesc implements Serializable {
     private Long itemId;
 
@@ -16,8 +16,6 @@ public class TbItemDesc implements Serializable {
 
     private String itemDesc;
     @Id
-    @GeneratedValue(generator = "_native")
-    @GenericGenerator(name = "_native" ,strategy = "native")
     @Column(name = "item_id")
     public Long getItemId() {
         return itemId;

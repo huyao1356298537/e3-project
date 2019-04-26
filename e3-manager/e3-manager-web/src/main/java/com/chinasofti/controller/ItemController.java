@@ -26,6 +26,7 @@ public class ItemController {
 
     @Autowired
     private ItemService itemService;
+    @Autowired
     private ItemDescService itemDescService;
 
     @RequestMapping("/list")
@@ -42,7 +43,7 @@ public class ItemController {
         long itemId = IDUtils.genItemId();
         System.out.println(itemId);
         // 2、补全TbItem对象的属性
-//        item.setId(itemId);
+        item.setId(itemId);
         //商品状态，1-正常，2-下架，3-删除
         item.setStatus((byte) 1);
         Date date = new Date();
@@ -53,7 +54,7 @@ public class ItemController {
         // 4、创建一个TbItemDesc对象
         TbItemDesc itemDesc = new TbItemDesc();
         // 5、补全TbItemDesc的属性
-//        itemDesc.setItemId(itemId);
+        itemDesc.setItemId(itemId);
         itemDesc.setItemDesc(desc);
         itemDesc.setCreated(date);
         itemDesc.setUpdated(date);
@@ -62,5 +63,4 @@ public class ItemController {
         // 7、E3Result.ok()
         return E3Result.ok();
     }
-
 }

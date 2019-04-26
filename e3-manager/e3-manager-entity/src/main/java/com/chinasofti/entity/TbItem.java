@@ -1,8 +1,9 @@
 package com.chinasofti.entity;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -32,8 +33,6 @@ public class TbItem implements Serializable {
     private Date updated;
 
     @Id
-    @GeneratedValue(generator = "_native")
-    @GenericGenerator(name = "_native" ,strategy = "native")
     public Long getId() {
         return id;
     }
@@ -120,5 +119,22 @@ public class TbItem implements Serializable {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    @Override
+    public String toString() {
+        return "TbItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", sellPoint='" + sellPoint + '\'' +
+                ", price=" + price +
+                ", num=" + num +
+                ", barcode='" + barcode + '\'' +
+                ", image='" + image + '\'' +
+                ", cid=" + cid +
+                ", status=" + status +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
     }
 }
