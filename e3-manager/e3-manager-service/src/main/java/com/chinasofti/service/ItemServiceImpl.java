@@ -34,5 +34,23 @@ public class ItemServiceImpl implements ItemService {
         itemDao.add(tbItem);
     }
 
+    @Override
+    public TbItem quertOne(long id) {
+        return itemDao.query(id);
+
+    }
+
+    @Override
+    public void update(TbItem tbItem) {
+        itemDao.update(tbItem);
+
+    }
+
+    @Override
+    public void delete(long id) {
+        itemDao.delete(id);
+
+    }
+
 }
 

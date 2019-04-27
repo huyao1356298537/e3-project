@@ -13,9 +13,9 @@ public interface BaseDao<T>{
 
 	void update(T t);
 
-	void delete(Integer id);
+	void delete(long id);
 
-	T query(Integer id);
+	T query(long id);
 
 	List<T>queryByPageBean(T t, int firstResult, int maxResults, Object... params);
 

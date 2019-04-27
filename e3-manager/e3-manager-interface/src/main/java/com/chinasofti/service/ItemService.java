@@ -12,4 +12,7 @@ public interface ItemService {
 
     public EasyUIDataGridResult queryByPageBean(int pageIndex, int pageCount);
     public void save(TbItem tbItem);
+    public TbItem quertOne(long id);
+    public void update(TbItem tbItem);
+    public void delete(long id);
 }

@@ -10,4 +10,6 @@ import com.chinasofti.entity.TbItemDesc;
 public interface ItemDescService {
 
     public void save(TbItemDesc tbItemDesc);
+    public TbItemDesc queryOne(long id);
+    public void update(TbItemDesc tbItemDesc);
 }

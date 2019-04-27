@@ -40,14 +40,14 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void delete(long id) {
 		T t = hibernateTemplate.get(clz, id);
 		if(t!=null)
 			hibernateTemplate.delete(t);
 	}
 
 	@Override
-	public T query(Integer id) {
+	public T query(long id) {
 		return hibernateTemplate.get(clz, id);
 	}
 

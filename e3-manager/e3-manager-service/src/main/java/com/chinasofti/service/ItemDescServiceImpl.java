@@ -20,5 +20,16 @@ public class ItemDescServiceImpl implements ItemDescService {
     public void save(TbItemDesc tbItemDesc) {
         itemDescDao.add(tbItemDesc);
     }
+
+    @Override
+    public TbItemDesc queryOne(long id) {
+        TbItemDesc query = itemDescDao.query(id);
+        return query;
+    }
+
+    @Override
+    public void update(TbItemDesc tbItemDesc) {
+        itemDescDao.update(tbItemDesc);
+    }
 }
 

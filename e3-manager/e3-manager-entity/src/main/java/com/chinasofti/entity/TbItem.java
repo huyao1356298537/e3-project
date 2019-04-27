@@ -26,6 +26,8 @@ public class TbItem implements Serializable {
 
     private Long cid;
 
+//    private long cid;
+
     private Byte status;
 
     private Date created;
@@ -88,6 +90,7 @@ public class TbItem implements Serializable {
     public void setImage(String image) {
         this.image = image;
     }
+
 
     public Long getCid() {
         return cid;

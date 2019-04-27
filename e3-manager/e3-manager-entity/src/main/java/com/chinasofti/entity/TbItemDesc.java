@@ -16,6 +16,7 @@ public class TbItemDesc implements Serializable {
 
     private String itemDesc;
     @Id
+
     @Column(name = "item_id")
     public Long getItemId() {
         return itemId;

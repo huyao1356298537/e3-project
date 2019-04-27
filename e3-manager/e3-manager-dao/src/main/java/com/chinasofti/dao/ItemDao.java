@@ -8,5 +8,4 @@ import com.chinasofti.framework.BaseDao;
  * time:18:55
  */
 public interface ItemDao extends BaseDao<TbItem> {
-	
 }

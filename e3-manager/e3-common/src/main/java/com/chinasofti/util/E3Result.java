@@ -29,7 +29,7 @@ public class E3Result implements Serializable{
     }
 
     public static E3Result ok() {
-        return new E3Result(null);
+        return new E3Result(1);
     }
 
     public E3Result() {

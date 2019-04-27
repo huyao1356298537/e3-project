@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <table class="easyui-datagrid" id="itemList" title="商品列表" 
-       data-options="singleSelect:false,collapsible:true,pagination:true,url:'/item/list',method:'get',pageSize:10,toolbar:toolbar">
+       data-options="singleSelect:false,collapsible:true,pagination:true,url:'/item/list',method:'get',pageSize:30,toolbar:toolbar">
     <thead>
         <tr>
         	<th data-options="field:'ck',checkbox:true"></th>
@@ -58,7 +58,6 @@
         			var data = $("#itemList").datagrid("getSelections")[0];
         			data.priceView = E3.formatPrice(data.price);
         			$("#itemeEditForm").form("load",data);
-        			
         			// 加载商品描述
         			$.getJSON('/rest/item/query/item/desc/'+data.id,function(_data){
         				if(_data.status == 200){
@@ -118,7 +117,7 @@
         	    if (r){
         	    	var params = {"ids":ids};
                 	$.post("/rest/item/delete",params, function(data){
-            			if(data.status == 200){
+            			if(eval("("+data+")").status == 200){
             				$.messager.alert('提示','删除商品成功!',undefined,function(){
             					$("#itemList").datagrid("reload");
             				});
@@ -139,8 +138,10 @@
         	$.messager.confirm('确认','确定下架ID为 '+ids+' 的商品吗？',function(r){
         	    if (r){
         	    	var params = {"ids":ids};
+        	    	alert(ids)
                 	$.post("/rest/item/instock",params, function(data){
-            			if(data.status == 200){
+                	    alert(data)
+            			if(eval("("+data+")").status == 200){
             				$.messager.alert('提示','下架商品成功!',undefined,function(){
             					$("#itemList").datagrid("reload");
             				});
@@ -162,7 +163,7 @@
         	    if (r){
         	    	var params = {"ids":ids};
                 	$.post("/rest/item/reshelf",params, function(data){
-            			if(data.status == 200){
+            			if(eval("("+data+")").status == 200){
             				$.messager.alert('提示','上架商品成功!',undefined,function(){
             					$("#itemList").datagrid("reload");
             				});

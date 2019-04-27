@@ -5,6 +5,8 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -25,6 +27,10 @@ public class TbItemCat implements Serializable {
     private Date created;
 
     private Date updated;
+
+    private Set<TbItem> sets=new HashSet<>();
+
+
 
 
     @Id
